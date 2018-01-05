@@ -23,4 +23,11 @@ final class GitHubAPI {
         
         let query: String
     }
+
+    struct AllUsers: GitHubRequest {
+        typealias Response = UsersResponse
+
+        let method: HTTPMethod = .get
+        let path: String = "/users"
+    }
 }

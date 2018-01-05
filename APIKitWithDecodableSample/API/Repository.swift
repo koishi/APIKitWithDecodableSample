@@ -20,6 +20,6 @@ struct Repository: Decodable, CustomDecodingStrategy {
     }
     
     static var decodingStrategies: Strategies {
-        return (.iso8601, .base64Decode, .throw)
+        return (.iso8601, .base64, .throw)
     }
 }

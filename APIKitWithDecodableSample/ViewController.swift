@@ -36,6 +36,15 @@ class ViewController: UIViewController {
                 print(error)
             }
         }
+
+        Session.send(GitHubAPI.AllUsers()) { [weak self] result in
+            switch result {
+            case .success(let response):
+                print(response)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 
