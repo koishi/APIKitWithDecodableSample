@@ -8,57 +8,37 @@
 
 import Foundation
 
-struct MypageTopResponse: Decodable, CustomDecodingStrategy {
-
+struct MypageTopResponseEntity: Codable, CustomDecodingStrategy {
     let code : Int
     let data : MypageTopResponseDataEntity
     let message : String
-
     static var decodingStrategies: Strategies {
         return Repository.decodingStrategies
     }
 }
 
 struct MypageTopResponseDataEntity : Codable {
-
-    let channels : [Channel]?
+    let channels : [ChannelEntity]?
     let point : String?
-    let timelines : [Timeline]?
-
-    enum CodingKeys: String, CodingKey {
-        case channels = "channels"
-        case point = "point"
-        case timelines = "timelines"
-    }
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        channels = try values.decodeIfPresent([Channel].self, forKey: .channels)
-        point = try values.decodeIfPresent(String.self, forKey: .point)
-        timelines = try values.decodeIfPresent([Timeline].self, forKey: .timelines)
-    }
+    let timelines : [TimelineEntity]?
 }
 
-//
-//    Timeline.swift
-//    Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
-
-struct Timeline : Codable {
+struct TimelineEntity : Codable {
 
     let channelName : String?
-    let classField : Clas?
-    let grade : Grade?
+    let classField : ClassFieldEntity?
+    let grade : GradeEntity?
     let iconUrl : String?
     let lastVisitedAt : String?
     let movieUrl : String?
     let reportCreateAt : String?
     let reportCreateMonth : String?
     let reportPostAt : String?
-    let subject : Subject?
+    let subject : SubjectEntity?
     let text : String?
     let thumbnailSmall : String?
     let timelineType : String?
     let title : String?
-
 
     enum CodingKeys: String, CodingKey {
         case channelName = "channel_name"
@@ -71,43 +51,19 @@ struct Timeline : Codable {
         case reportCreateMonth = "report_create_month"
         case reportPostAt = "report_post_at"
         case subject
-        case text = "text"
+        case text
         case thumbnailSmall = "thumbnail_small"
         case timelineType = "timeline_type"
-        case title = "title"
+        case title
     }
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        channelName = try values.decodeIfPresent(String.self, forKey: .channelName)
-        classField = try Clas(from: decoder)
-        grade = try Grade(from: decoder)
-        iconUrl = try values.decodeIfPresent(String.self, forKey: .iconUrl)
-        lastVisitedAt = try values.decodeIfPresent(String.self, forKey: .lastVisitedAt)
-        movieUrl = try values.decodeIfPresent(String.self, forKey: .movieUrl)
-        reportCreateAt = try values.decodeIfPresent(String.self, forKey: .reportCreateAt)
-        reportCreateMonth = try values.decodeIfPresent(String.self, forKey: .reportCreateMonth)
-        reportPostAt = try values.decodeIfPresent(String.self, forKey: .reportPostAt)
-        subject = try Subject(from: decoder)
-        text = try values.decodeIfPresent(String.self, forKey: .text)
-        thumbnailSmall = try values.decodeIfPresent(String.self, forKey: .thumbnailSmall)
-        timelineType = try values.decodeIfPresent(String.self, forKey: .timelineType)
-        title = try values.decodeIfPresent(String.self, forKey: .title)
-    }
-
-
 }
 
-//
-//    Subject.swift
-//    Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
-
-struct Subject : Codable {
+struct SubjectEntity : Codable {
 
     let icon : String?
     let id : String?
     let name : String?
     let nameKana : String?
-
 
     enum CodingKeys: String, CodingKey {
         case icon = "icon"
@@ -115,59 +71,31 @@ struct Subject : Codable {
         case name = "name"
         case nameKana = "name_kana"
     }
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        icon = try values.decodeIfPresent(String.self, forKey: .icon)
-        id = try values.decodeIfPresent(String.self, forKey: .id)
-        name = try values.decodeIfPresent(String.self, forKey: .name)
-        nameKana = try values.decodeIfPresent(String.self, forKey: .nameKana)
-    }
-
 
 }
 
-
-//
-//    Grade.swift
-//    Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
-
-struct Grade : Codable {
+struct GradeEntity : Codable {
 
     let id : String?
     let name : String?
     let nameKana : String?
-
 
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case name = "name"
         case nameKana = "name_kana"
     }
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        id = try values.decodeIfPresent(String.self, forKey: .id)
-        name = try values.decodeIfPresent(String.self, forKey: .name)
-        nameKana = try values.decodeIfPresent(String.self, forKey: .nameKana)
-    }
-
 
 }
 
-
-
-//
-//    Clas.swift
-//    Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
-
-struct Clas : Codable {
+struct ClassFieldEntity : Codable {
 
     let drillName : String?
     let id : String?
-    let movie : AdsenseMovie?
+    let movie : AdsenseMovieEntity?
     let name : String?
-    let question : [Question]?
+    let question : [QuestionEntity]?
     let sortOrder : String?
-
 
     enum CodingKeys: String, CodingKey {
         case drillName = "drill_name"
@@ -177,26 +105,9 @@ struct Clas : Codable {
         case question = "question"
         case sortOrder = "sort_order"
     }
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        drillName = try values.decodeIfPresent(String.self, forKey: .drillName)
-        id = try values.decodeIfPresent(String.self, forKey: .id)
-        movie = try AdsenseMovie(from: decoder)
-        name = try values.decodeIfPresent(String.self, forKey: .name)
-        question = try values.decodeIfPresent([Question].self, forKey: .question)
-        sortOrder = try values.decodeIfPresent(String.self, forKey: .sortOrder)
-    }
-
-
 }
 
-
-
-//
-//    Question.swift
-//    Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
-
-struct Question : Codable {
+struct QuestionEntity : Codable {
 
     let answer : String?
     let answer1 : String?
@@ -226,34 +137,13 @@ struct Question : Codable {
         case statement = "statement"
         case thumbnail = "thumbnail"
     }
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        answer = try values.decodeIfPresent(String.self, forKey: .answer)
-        answer1 = try values.decodeIfPresent(String.self, forKey: .answer1)
-        answer2 = try values.decodeIfPresent(String.self, forKey: .answer2)
-        answer3 = try values.decodeIfPresent(String.self, forKey: .answer3)
-        answer4 = try values.decodeIfPresent(String.self, forKey: .answer4)
-        explanation = try values.decodeIfPresent(String.self, forKey: .explanation)
-        id = try values.decodeIfPresent(String.self, forKey: .id)
-        name = try values.decodeIfPresent(String.self, forKey: .name)
-        score = try values.decodeIfPresent(String.self, forKey: .score)
-        sortOrder = try values.decodeIfPresent(String.self, forKey: .sortOrder)
-        statement = try values.decodeIfPresent(String.self, forKey: .statement)
-        thumbnail = try values.decodeIfPresent(String.self, forKey: .thumbnail)
-    }
-
-
 }
 
-//
-//    Channel.swift
-//    Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
+struct ChannelEntity : Codable {
 
-struct Channel : Codable {
-
-    let adsenseImage : AdsenseImage?
-    let adsenseMovie : AdsenseMovie?
-    let company : Company?
+    let adsenseImage : AdsenseImageEntity?
+    let adsenseMovie : AdsenseMovieEntity?
+    let company : CompanyEntity?
     let id : String?
     let link : String?
     let point : String?
@@ -261,7 +151,6 @@ struct Channel : Codable {
     let title : String?
     let updatedAt : String?
     let url : String?
-
 
     enum CodingKeys: String, CodingKey {
         case adsenseImage
@@ -275,37 +164,16 @@ struct Channel : Codable {
         case updatedAt = "updated_at"
         case url = "url"
     }
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        adsenseImage = try AdsenseImage(from: decoder)
-        adsenseMovie = try AdsenseMovie(from: decoder)
-        company = try Company(from: decoder)
-        id = try values.decodeIfPresent(String.self, forKey: .id)
-        link = try values.decodeIfPresent(String.self, forKey: .link)
-        point = try values.decodeIfPresent(String.self, forKey: .point)
-        text = try values.decodeIfPresent(String.self, forKey: .text)
-        title = try values.decodeIfPresent(String.self, forKey: .title)
-        updatedAt = try values.decodeIfPresent(String.self, forKey: .updatedAt)
-        url = try values.decodeIfPresent(String.self, forKey: .url)
-    }
-
 
 }
 
-
-//
-//    Company.swift
-//    Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
-
-
-struct Company : Codable {
+struct CompanyEntity : Codable {
 
     let iconUrl : String?
     let id : String?
     let name : String?
     let point : String?
     let url : String?
-
 
     enum CodingKeys: String, CodingKey {
         case iconUrl = "icon_url"
@@ -314,23 +182,10 @@ struct Company : Codable {
         case point = "point"
         case url = "url"
     }
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        iconUrl = try values.decodeIfPresent(String.self, forKey: .iconUrl)
-        id = try values.decodeIfPresent(String.self, forKey: .id)
-        name = try values.decodeIfPresent(String.self, forKey: .name)
-        point = try values.decodeIfPresent(String.self, forKey: .point)
-        url = try values.decodeIfPresent(String.self, forKey: .url)
-    }
-
 
 }
-//
-//    AdsenseMovie.swift
-//    Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
-
-struct AdsenseMovie : Codable {
+struct AdsenseMovieEntity : Codable {
 
     let id : String?
     let name : String?
@@ -338,7 +193,6 @@ struct AdsenseMovie : Codable {
     let thumbnailMidium : String?
     let thumbnailSmall : String?
     let url : String?
-
 
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -348,43 +202,19 @@ struct AdsenseMovie : Codable {
         case thumbnailSmall = "thumbnail_small"
         case url = "url"
     }
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        id = try values.decodeIfPresent(String.self, forKey: .id)
-        name = try values.decodeIfPresent(String.self, forKey: .name)
-        thumbnailLarge = try values.decodeIfPresent(String.self, forKey: .thumbnailLarge)
-        thumbnailMidium = try values.decodeIfPresent(String.self, forKey: .thumbnailMidium)
-        thumbnailSmall = try values.decodeIfPresent(String.self, forKey: .thumbnailSmall)
-        url = try values.decodeIfPresent(String.self, forKey: .url)
-    }
-
 
 }
 
-
-
-//
-//    AdsenseImage.swift
-//    Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
-
-struct AdsenseImage : Codable {
+struct AdsenseImageEntity : Codable {
 
     let altText : String?
     let id : String?
     let url : String?
-
 
     enum CodingKeys: String, CodingKey {
         case altText = "alt_text"
         case id = "id"
         case url = "url"
     }
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        altText = try values.decodeIfPresent(String.self, forKey: .altText)
-        id = try values.decodeIfPresent(String.self, forKey: .id)
-        url = try values.decodeIfPresent(String.self, forKey: .url)
-    }
-
 
 }
