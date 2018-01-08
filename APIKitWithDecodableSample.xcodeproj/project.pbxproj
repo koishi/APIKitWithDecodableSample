@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8206FE62200383F100F85212 /* StudyGearRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8206FE61200383F100F85212 /* StudyGearRequest.swift */; };
+		8206FE65200384C900F85212 /* StudyGearAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8206FE64200384C900F85212 /* StudyGearAPI.swift */; };
+		8206FE67200385F200F85212 /* MypageTopResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8206FE66200385F200F85212 /* MypageTopResponse.swift */; };
 		9024C4A31EF76DB50046AA0A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9024C4A21EF76D8B0046AA0A /* Result.framework */; };
 		9024C4A41EF76DBB0046AA0A /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9024C4A01EF76D660046AA0A /* APIKit.framework */; };
 		9024C4A71EF76E1B0046AA0A /* GitHubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9024C4A61EF76E1B0046AA0A /* GitHubRequest.swift */; };
@@ -27,6 +30,9 @@
 
 /* Begin PBXFileReference section */
 		7D64CF8EF92BB9990BA63ECE /* Pods-APIKitWithDecodableSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APIKitWithDecodableSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-APIKitWithDecodableSample/Pods-APIKitWithDecodableSample.debug.xcconfig"; sourceTree = "<group>"; };
+		8206FE61200383F100F85212 /* StudyGearRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGearRequest.swift; sourceTree = "<group>"; };
+		8206FE64200384C900F85212 /* StudyGearAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGearAPI.swift; sourceTree = "<group>"; };
+		8206FE66200385F200F85212 /* MypageTopResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageTopResponse.swift; sourceTree = "<group>"; };
 		9024C4A01EF76D660046AA0A /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		9024C4A21EF76D8B0046AA0A /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		9024C4A61EF76E1B0046AA0A /* GitHubRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRequest.swift; sourceTree = "<group>"; };
@@ -62,6 +68,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8206FE632003846D00F85212 /* StudyGear */ = {
+			isa = PBXGroup;
+			children = (
+				8206FE61200383F100F85212 /* StudyGearRequest.swift */,
+				8206FE64200384C900F85212 /* StudyGearAPI.swift */,
+				8206FE66200385F200F85212 /* MypageTopResponse.swift */,
+			);
+			path = StudyGear;
+			sourceTree = "<group>";
+		};
 		8D7B229AAFF40E7C6D550CBC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +100,7 @@
 		9024C4A51EF76E0B0046AA0A /* API */ = {
 			isa = PBXGroup;
 			children = (
+				8206FE632003846D00F85212 /* StudyGear */,
 				9024C4A61EF76E1B0046AA0A /* GitHubRequest.swift */,
 				9024C4B01EF7962C0046AA0A /* CustomDecodingStrategy.swift */,
 				9024C4A81EF770690046AA0A /* DecodableDataParser.swift */,
@@ -219,13 +236,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-APIKitWithDecodableSample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A77DF35A6D5B92E09C551E9B /* [CP] Embed Pods Frameworks */ = {
@@ -234,9 +254,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-APIKitWithDecodableSample/Pods-APIKitWithDecodableSample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/APIKit/APIKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APIKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -250,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8206FE67200385F200F85212 /* MypageTopResponse.swift in Sources */,
 				90E8E5761EF76B57005597F8 /* ViewController.swift in Sources */,
 				FAAE64531FFF51F100F468B4 /* UsersResponse.swift in Sources */,
 				9024C4A71EF76E1B0046AA0A /* GitHubRequest.swift in Sources */,
@@ -257,9 +283,11 @@
 				9024C4A91EF770690046AA0A /* DecodableDataParser.swift in Sources */,
 				90E8E5741EF76B57005597F8 /* AppDelegate.swift in Sources */,
 				FAAE64511FFF488E00F468B4 /* User.swift in Sources */,
+				8206FE62200383F100F85212 /* StudyGearRequest.swift in Sources */,
 				9024C4AB1EF7753C0046AA0A /* SearchRepositoriesResponse.swift in Sources */,
 				9024C4AF1EF778770046AA0A /* GitHubAPI.swift in Sources */,
 				9024C4AD1EF7754A0046AA0A /* Repository.swift in Sources */,
+				8206FE65200384C900F85212 /* StudyGearAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

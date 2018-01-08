@@ -27,15 +27,15 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        Session.send(GitHubAPI.SearchRepositories(query: "rxswift")) { [weak self] result in
-            switch result {
-            case .success(let response):
-                self?.repositories = response.items
-                self?.tableView.reloadData()
-            case .failure(let error):
-                print(error)
-            }
-        }
+//        Session.send(GitHubAPI.SearchRepositories(query: "rxswift")) { [weak self] result in
+//            switch result {
+//            case .success(let response):
+//                self?.repositories = response.items
+//                self?.tableView.reloadData()
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
 
         Session.send(GitHubAPI.AllUsers()) { [weak self] result in
             switch result {
@@ -45,6 +45,16 @@ class ViewController: UIViewController {
                 print(error)
             }
         }
+
+        Session.send(StudyGearAPI.MypageTop(userId: "1")) { [weak self] result in
+            switch result {
+            case .success(let response):
+                print(response)
+            case .failure(let error):
+                print(error)
+            }
+        }
+
     }
 }
 
