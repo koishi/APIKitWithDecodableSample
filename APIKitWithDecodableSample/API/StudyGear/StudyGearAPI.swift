@@ -12,16 +12,11 @@ import APIKit
 final class StudyGearAPI {
     private init() {}
 
-    struct SearchRepositories: GitHubRequest {
-        typealias Response = SearchRepositoriesResponse
-
+    //    学年リスト取得
+    struct GetGradeList: StudyGearRequest {
+        typealias Response = GetGradeListResponse
         let method: HTTPMethod = .get
-        let path: String = "/search/repositories"
-        var parameters: Any? {
-            return ["q": query, "page": 1]
-        }
-
-        let query: String
+        let path: String = "/share/get_grade_list"
     }
 
     struct MypageTop: StudyGearRequest {
@@ -34,4 +29,11 @@ final class StudyGearAPI {
         }
         let userId: String
     }
+
+    struct GetStamp: StudyGearRequest {
+        typealias Response = GetStampResponse
+        let method: HTTPMethod = .get
+        let path: String = "/stamp/get_stamp/"
+    }
+
 }
