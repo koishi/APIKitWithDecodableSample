@@ -9,9 +9,9 @@
 import Foundation
 
 struct MypageTopResponseEntity: Codable, CustomDecodingStrategy {
-    let code : Int
-    let data : MypageTopResponseDataEntity
-    let message : String
+    let code : Int?
+    let data : MypageTopResponseDataEntity?
+    let message : String?
     static var decodingStrategies: Strategies {
         return Repository.decodingStrategies
     }
@@ -24,7 +24,6 @@ struct MypageTopResponseDataEntity : Codable {
 }
 
 struct TimelineEntity : Codable {
-
     let channelName : String?
     let classField : ClassFieldEntity?
     let grade : GradeEntity?
@@ -59,7 +58,6 @@ struct TimelineEntity : Codable {
 }
 
 struct SubjectEntity : Codable {
-
     let icon : String?
     let id : String?
     let name : String?
@@ -75,7 +73,6 @@ struct SubjectEntity : Codable {
 }
 
 struct GradeEntity : Codable {
-
     let id : String?
     let name : String?
     let nameKana : String?
@@ -89,7 +86,6 @@ struct GradeEntity : Codable {
 }
 
 struct ClassFieldEntity : Codable {
-
     let drillName : String?
     let id : String?
     let movie : AdsenseMovieEntity?
@@ -108,7 +104,6 @@ struct ClassFieldEntity : Codable {
 }
 
 struct QuestionEntity : Codable {
-
     let answer : String?
     let answer1 : String?
     let answer2 : String?
@@ -121,7 +116,6 @@ struct QuestionEntity : Codable {
     let sortOrder : String?
     let statement : String?
     let thumbnail : String?
-
 
     enum CodingKeys: String, CodingKey {
         case answer = "answer"
@@ -140,7 +134,6 @@ struct QuestionEntity : Codable {
 }
 
 struct ChannelEntity : Codable {
-
     let adsenseImage : AdsenseImageEntity?
     let adsenseMovie : AdsenseMovieEntity?
     let company : CompanyEntity?
@@ -168,7 +161,6 @@ struct ChannelEntity : Codable {
 }
 
 struct CompanyEntity : Codable {
-
     let iconUrl : String?
     let id : String?
     let name : String?
@@ -182,11 +174,9 @@ struct CompanyEntity : Codable {
         case point = "point"
         case url = "url"
     }
-
 }
 
 struct AdsenseMovieEntity : Codable {
-
     let id : String?
     let name : String?
     let thumbnailLarge : String?
@@ -206,7 +196,6 @@ struct AdsenseMovieEntity : Codable {
 }
 
 struct AdsenseImageEntity : Codable {
-
     let altText : String?
     let id : String?
     let url : String?
