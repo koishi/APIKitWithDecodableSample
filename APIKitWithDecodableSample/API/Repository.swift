@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Repository: Decodable, CustomDecodingStrategy {
+struct Repository: GitHubAPIResponse {
     let id: Int
     let fullName: String
     let createdAt: Date
@@ -17,9 +17,5 @@ struct Repository: Decodable, CustomDecodingStrategy {
         case id
         case fullName = "full_name"
         case createdAt = "created_at"
-    }
-    
-    static var decodingStrategies: Strategies {
-        return (.iso8601, .base64, .throw)
     }
 }

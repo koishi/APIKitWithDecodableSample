@@ -8,11 +8,16 @@
 
 import Foundation
 
-struct User: Decodable, CustomDecodingStrategy {
+struct User: GitHubAPIResponse {
     let id: Int
     let login: String
     let avatar_url: String
+}
 
+protocol GitHubAPIResponse:Decodable, CustomDecodingStrategy {
+}
+
+extension GitHubAPIResponse {
     static var decodingStrategies: Strategies {
         return (.iso8601, .base64, .throw)
     }
