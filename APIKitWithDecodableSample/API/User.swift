@@ -8,7 +8,12 @@
 
 import Foundation
 
-struct User: Codable {
+struct User: Decodable, CustomDecodingStrategy {
     let id: Int
     let login: String
+    let avatar_url: String
+
+    static var decodingStrategies: Strategies {
+        return (.iso8601, .base64, .throw)
+    }
 }

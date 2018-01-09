@@ -12,7 +12,7 @@ struct UsersResponse: CustomDecodingStrategy {
     let users: [User]
 
     static var decodingStrategies: Strategies {
-        return Repository.decodingStrategies
+        return User.decodingStrategies
     }
 }
 
