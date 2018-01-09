@@ -42,8 +42,8 @@ struct StampEntity : Codable {
 
     let id : String?
     let image : String?
-    let sortOrder : Int?
-    let stampSetId : Int?
+    let sortOrder : String?
+    let stampSetId : String?
 
     enum CodingKeys: String, CodingKey {
         case id = "id"

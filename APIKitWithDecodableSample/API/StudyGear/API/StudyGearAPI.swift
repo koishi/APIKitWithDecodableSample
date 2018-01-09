@@ -36,4 +36,18 @@ final class StudyGearAPI {
         let path: String = "/stamp/get_stamp/"
     }
 
+    struct GetTimeline: StudyGearRequest {
+        typealias Response = TimeLineResponse
+        let method: HTTPMethod = .get
+        let path: String = "/timeline/get_message/"
+        var parameters: Any? {
+            return ["sort": sort,
+                    "page": page,
+                    "size": size]
+        }
+        let sort: String
+        let page: Int
+        let size: Int
+    }
+
 }

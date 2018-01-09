@@ -13,6 +13,7 @@
 		8266C45120039F24003906A4 /* GetGradeListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C45020039F24003906A4 /* GetGradeListResponse.swift */; };
 		8266C4532003A24A003906A4 /* GetStampResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C4522003A24A003906A4 /* GetStampResponse.swift */; };
 		8266C4552004FEA8003906A4 /* StudyGearAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C4542004FEA8003906A4 /* StudyGearAPIResponse.swift */; };
+		8266C45A20050C31003906A4 /* TimeLineResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C45920050C31003906A4 /* TimeLineResponse.swift */; };
 		9024C4A31EF76DB50046AA0A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9024C4A21EF76D8B0046AA0A /* Result.framework */; };
 		9024C4A41EF76DBB0046AA0A /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9024C4A01EF76D660046AA0A /* APIKit.framework */; };
 		9024C4A71EF76E1B0046AA0A /* GitHubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9024C4A61EF76E1B0046AA0A /* GitHubRequest.swift */; };
@@ -39,6 +40,7 @@
 		8266C45020039F24003906A4 /* GetGradeListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGradeListResponse.swift; sourceTree = "<group>"; };
 		8266C4522003A24A003906A4 /* GetStampResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStampResponse.swift; sourceTree = "<group>"; };
 		8266C4542004FEA8003906A4 /* StudyGearAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGearAPIResponse.swift; sourceTree = "<group>"; };
+		8266C45920050C31003906A4 /* TimeLineResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineResponse.swift; sourceTree = "<group>"; };
 		9024C4A01EF76D660046AA0A /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		9024C4A21EF76D8B0046AA0A /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		9024C4A61EF76E1B0046AA0A /* GitHubRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRequest.swift; sourceTree = "<group>"; };
@@ -99,8 +101,24 @@
 				8206FE66200385F200F85212 /* MypageTopResponse.swift */,
 				8266C45020039F24003906A4 /* GetGradeListResponse.swift */,
 				8266C4522003A24A003906A4 /* GetStampResponse.swift */,
+				8266C45920050C31003906A4 /* TimeLineResponse.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		8266C45820050B34003906A4 /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				9024C4A61EF76E1B0046AA0A /* GitHubRequest.swift */,
+				9024C4B01EF7962C0046AA0A /* CustomDecodingStrategy.swift */,
+				9024C4A81EF770690046AA0A /* DecodableDataParser.swift */,
+				9024C4AA1EF7753C0046AA0A /* SearchRepositoriesResponse.swift */,
+				9024C4AC1EF7754A0046AA0A /* Repository.swift */,
+				9024C4AE1EF778770046AA0A /* GitHubAPI.swift */,
+				FAAE64501FFF488E00F468B4 /* User.swift */,
+				FAAE64521FFF51F100F468B4 /* UsersResponse.swift */,
+			);
+			path = GitHub;
 			sourceTree = "<group>";
 		};
 		8D7B229AAFF40E7C6D550CBC /* Pods */ = {
@@ -125,15 +143,8 @@
 		9024C4A51EF76E0B0046AA0A /* API */ = {
 			isa = PBXGroup;
 			children = (
+				8266C45820050B34003906A4 /* GitHub */,
 				8206FE632003846D00F85212 /* StudyGear */,
-				9024C4A61EF76E1B0046AA0A /* GitHubRequest.swift */,
-				9024C4B01EF7962C0046AA0A /* CustomDecodingStrategy.swift */,
-				9024C4A81EF770690046AA0A /* DecodableDataParser.swift */,
-				9024C4AA1EF7753C0046AA0A /* SearchRepositoriesResponse.swift */,
-				9024C4AC1EF7754A0046AA0A /* Repository.swift */,
-				9024C4AE1EF778770046AA0A /* GitHubAPI.swift */,
-				FAAE64501FFF488E00F468B4 /* User.swift */,
-				FAAE64521FFF51F100F468B4 /* UsersResponse.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -306,6 +317,7 @@
 				FAAE64531FFF51F100F468B4 /* UsersResponse.swift in Sources */,
 				9024C4A71EF76E1B0046AA0A /* GitHubRequest.swift in Sources */,
 				9024C4B11EF7962C0046AA0A /* CustomDecodingStrategy.swift in Sources */,
+				8266C45A20050C31003906A4 /* TimeLineResponse.swift in Sources */,
 				8266C4552004FEA8003906A4 /* StudyGearAPIResponse.swift in Sources */,
 				8266C45120039F24003906A4 /* GetGradeListResponse.swift in Sources */,
 				9024C4A91EF770690046AA0A /* DecodableDataParser.swift in Sources */,
