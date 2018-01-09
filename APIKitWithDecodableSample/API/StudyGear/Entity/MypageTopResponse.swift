@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MypageTopResponseEntity: Codable, CustomDecodingStrategy {
+struct MypageTopResponseEntity: StudyGearAPIResponse {
     let code : Int?
     let data : MypageTopResponseDataEntity?
     let message : String?

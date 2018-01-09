@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct GetGradeListResponse : Codable {
+struct GetGradeListResponse : StudyGearAPIResponse {
     let code : Int?
     let grades : [GradeEntity]?
     let message : String?

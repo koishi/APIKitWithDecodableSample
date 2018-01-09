@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GetStampResponse: Codable, CustomDecodingStrategy  {
+class GetStampResponse: StudyGearAPIResponse  {
 
     let code : Int?
     let data : GetStampResponseDataEntity?
@@ -19,9 +19,9 @@ class GetStampResponse: Codable, CustomDecodingStrategy  {
 //        case data
 //        case message = "message"
 //    }
-    static var decodingStrategies: Strategies {
-        return Repository.decodingStrategies
-    }
+//    static var decodingStrategies: Strategies {
+//        return Repository.decodingStrategies
+//    }
 }
 
 struct GetStampResponseDataEntity : Codable {
@@ -40,7 +40,7 @@ struct GetStampResponseDataEntity : Codable {
 
 struct StampEntity : Codable {
 
-    let id : Int?
+    let id : String?
     let image : String?
     let sortOrder : Int?
     let stampSetId : Int?
