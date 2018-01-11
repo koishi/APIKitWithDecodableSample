@@ -14,6 +14,21 @@
 		8266C4532003A24A003906A4 /* GetStampResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C4522003A24A003906A4 /* GetStampResponse.swift */; };
 		8266C4552004FEA8003906A4 /* StudyGearAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C4542004FEA8003906A4 /* StudyGearAPIResponse.swift */; };
 		8266C45A20050C31003906A4 /* TimeLineResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C45920050C31003906A4 /* TimeLineResponse.swift */; };
+		8266C45D2007BB2F003906A4 /* TimelineEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C45C2007BB2F003906A4 /* TimelineEntity.swift */; };
+		8266C45F2007BBE7003906A4 /* SubjectEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C45E2007BBE7003906A4 /* SubjectEntity.swift */; };
+		8266C4612007BD0D003906A4 /* GradeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C4602007BD0D003906A4 /* GradeEntity.swift */; };
+		8266C4632007BD7E003906A4 /* ClassFieldEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C4622007BD7E003906A4 /* ClassFieldEntity.swift */; };
+		8266C4652007BE27003906A4 /* QuestionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C4642007BE27003906A4 /* QuestionEntity.swift */; };
+		8266C4672007BE7A003906A4 /* ChannelEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C4662007BE7A003906A4 /* ChannelEntity.swift */; };
+		8266C4692007BEF7003906A4 /* CompanyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C4682007BEF7003906A4 /* CompanyEntity.swift */; };
+		8266C46B2007BF17003906A4 /* AdsenseMovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C46A2007BF17003906A4 /* AdsenseMovieEntity.swift */; };
+		8266C46D2007BF4F003906A4 /* AdsenseImageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C46C2007BF4F003906A4 /* AdsenseImageEntity.swift */; };
+		8266C46F2007BFA4003906A4 /* StampEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C46E2007BFA4003906A4 /* StampEntity.swift */; };
+		8266C4712007BFDD003906A4 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C4702007BFDD003906A4 /* UserEntity.swift */; };
+		8266C4732007C01A003906A4 /* SchoolEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C4722007C01A003906A4 /* SchoolEntity.swift */; };
+		8266C4752007C03C003906A4 /* CityEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C4742007C03C003906A4 /* CityEntity.swift */; };
+		8266C4772007C06D003906A4 /* PrefectureEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C4762007C06D003906A4 /* PrefectureEntity.swift */; };
+		8266C4792007C08E003906A4 /* FamilyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C4782007C08E003906A4 /* FamilyEntity.swift */; };
 		9024C4A31EF76DB50046AA0A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9024C4A21EF76D8B0046AA0A /* Result.framework */; };
 		9024C4A41EF76DBB0046AA0A /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9024C4A01EF76D660046AA0A /* APIKit.framework */; };
 		9024C4A71EF76E1B0046AA0A /* GitHubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9024C4A61EF76E1B0046AA0A /* GitHubRequest.swift */; };
@@ -41,6 +56,21 @@
 		8266C4522003A24A003906A4 /* GetStampResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStampResponse.swift; sourceTree = "<group>"; };
 		8266C4542004FEA8003906A4 /* StudyGearAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGearAPIResponse.swift; sourceTree = "<group>"; };
 		8266C45920050C31003906A4 /* TimeLineResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineResponse.swift; sourceTree = "<group>"; };
+		8266C45C2007BB2F003906A4 /* TimelineEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineEntity.swift; sourceTree = "<group>"; };
+		8266C45E2007BBE7003906A4 /* SubjectEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectEntity.swift; sourceTree = "<group>"; };
+		8266C4602007BD0D003906A4 /* GradeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeEntity.swift; sourceTree = "<group>"; };
+		8266C4622007BD7E003906A4 /* ClassFieldEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassFieldEntity.swift; sourceTree = "<group>"; };
+		8266C4642007BE27003906A4 /* QuestionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionEntity.swift; sourceTree = "<group>"; };
+		8266C4662007BE7A003906A4 /* ChannelEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelEntity.swift; sourceTree = "<group>"; };
+		8266C4682007BEF7003906A4 /* CompanyEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyEntity.swift; sourceTree = "<group>"; };
+		8266C46A2007BF17003906A4 /* AdsenseMovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsenseMovieEntity.swift; sourceTree = "<group>"; };
+		8266C46C2007BF4F003906A4 /* AdsenseImageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsenseImageEntity.swift; sourceTree = "<group>"; };
+		8266C46E2007BFA4003906A4 /* StampEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampEntity.swift; sourceTree = "<group>"; };
+		8266C4702007BFDD003906A4 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		8266C4722007C01A003906A4 /* SchoolEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolEntity.swift; sourceTree = "<group>"; };
+		8266C4742007C03C003906A4 /* CityEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityEntity.swift; sourceTree = "<group>"; };
+		8266C4762007C06D003906A4 /* PrefectureEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureEntity.swift; sourceTree = "<group>"; };
+		8266C4782007C08E003906A4 /* FamilyEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyEntity.swift; sourceTree = "<group>"; };
 		9024C4A01EF76D660046AA0A /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		9024C4A21EF76D8B0046AA0A /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		9024C4A61EF76E1B0046AA0A /* GitHubRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRequest.swift; sourceTree = "<group>"; };
@@ -79,7 +109,7 @@
 		8206FE632003846D00F85212 /* StudyGear */ = {
 			isa = PBXGroup;
 			children = (
-				8266C457200500FF003906A4 /* Entity */,
+				8266C45B2007BA6A003906A4 /* Response */,
 				8266C4562004FFCA003906A4 /* API */,
 			);
 			path = StudyGear;
@@ -98,10 +128,21 @@
 		8266C457200500FF003906A4 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				8206FE66200385F200F85212 /* MypageTopResponse.swift */,
-				8266C45020039F24003906A4 /* GetGradeListResponse.swift */,
-				8266C4522003A24A003906A4 /* GetStampResponse.swift */,
-				8266C45920050C31003906A4 /* TimeLineResponse.swift */,
+				8266C45C2007BB2F003906A4 /* TimelineEntity.swift */,
+				8266C45E2007BBE7003906A4 /* SubjectEntity.swift */,
+				8266C4602007BD0D003906A4 /* GradeEntity.swift */,
+				8266C4622007BD7E003906A4 /* ClassFieldEntity.swift */,
+				8266C4642007BE27003906A4 /* QuestionEntity.swift */,
+				8266C4662007BE7A003906A4 /* ChannelEntity.swift */,
+				8266C4682007BEF7003906A4 /* CompanyEntity.swift */,
+				8266C46A2007BF17003906A4 /* AdsenseMovieEntity.swift */,
+				8266C46C2007BF4F003906A4 /* AdsenseImageEntity.swift */,
+				8266C46E2007BFA4003906A4 /* StampEntity.swift */,
+				8266C4702007BFDD003906A4 /* UserEntity.swift */,
+				8266C4722007C01A003906A4 /* SchoolEntity.swift */,
+				8266C4742007C03C003906A4 /* CityEntity.swift */,
+				8266C4762007C06D003906A4 /* PrefectureEntity.swift */,
+				8266C4782007C08E003906A4 /* FamilyEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -119,6 +160,18 @@
 				FAAE64521FFF51F100F468B4 /* UsersResponse.swift */,
 			);
 			path = GitHub;
+			sourceTree = "<group>";
+		};
+		8266C45B2007BA6A003906A4 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				8266C457200500FF003906A4 /* Entity */,
+				8206FE66200385F200F85212 /* MypageTopResponse.swift */,
+				8266C45020039F24003906A4 /* GetGradeListResponse.swift */,
+				8266C4522003A24A003906A4 /* GetStampResponse.swift */,
+				8266C45920050C31003906A4 /* TimeLineResponse.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		8D7B229AAFF40E7C6D550CBC /* Pods */ = {
@@ -311,23 +364,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8266C4652007BE27003906A4 /* QuestionEntity.swift in Sources */,
+				8266C4752007C03C003906A4 /* CityEntity.swift in Sources */,
+				8266C4632007BD7E003906A4 /* ClassFieldEntity.swift in Sources */,
+				8266C46B2007BF17003906A4 /* AdsenseMovieEntity.swift in Sources */,
 				8206FE67200385F200F85212 /* MypageTopResponse.swift in Sources */,
+				8266C4732007C01A003906A4 /* SchoolEntity.swift in Sources */,
 				8266C4532003A24A003906A4 /* GetStampResponse.swift in Sources */,
+				8266C45F2007BBE7003906A4 /* SubjectEntity.swift in Sources */,
 				90E8E5761EF76B57005597F8 /* ViewController.swift in Sources */,
 				FAAE64531FFF51F100F468B4 /* UsersResponse.swift in Sources */,
 				9024C4A71EF76E1B0046AA0A /* GitHubRequest.swift in Sources */,
 				9024C4B11EF7962C0046AA0A /* CustomDecodingStrategy.swift in Sources */,
+				8266C4792007C08E003906A4 /* FamilyEntity.swift in Sources */,
 				8266C45A20050C31003906A4 /* TimeLineResponse.swift in Sources */,
+				8266C4712007BFDD003906A4 /* UserEntity.swift in Sources */,
 				8266C4552004FEA8003906A4 /* StudyGearAPIResponse.swift in Sources */,
 				8266C45120039F24003906A4 /* GetGradeListResponse.swift in Sources */,
 				9024C4A91EF770690046AA0A /* DecodableDataParser.swift in Sources */,
 				90E8E5741EF76B57005597F8 /* AppDelegate.swift in Sources */,
+				8266C4612007BD0D003906A4 /* GradeEntity.swift in Sources */,
 				FAAE64511FFF488E00F468B4 /* User.swift in Sources */,
 				8206FE62200383F100F85212 /* StudyGearRequest.swift in Sources */,
 				9024C4AB1EF7753C0046AA0A /* SearchRepositoriesResponse.swift in Sources */,
+				8266C46F2007BFA4003906A4 /* StampEntity.swift in Sources */,
+				8266C4692007BEF7003906A4 /* CompanyEntity.swift in Sources */,
+				8266C4772007C06D003906A4 /* PrefectureEntity.swift in Sources */,
+				8266C4672007BE7A003906A4 /* ChannelEntity.swift in Sources */,
 				9024C4AF1EF778770046AA0A /* GitHubAPI.swift in Sources */,
 				9024C4AD1EF7754A0046AA0A /* Repository.swift in Sources */,
 				8206FE65200384C900F85212 /* StudyGearAPI.swift in Sources */,
+				8266C46D2007BF4F003906A4 /* AdsenseImageEntity.swift in Sources */,
+				8266C45D2007BB2F003906A4 /* TimelineEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

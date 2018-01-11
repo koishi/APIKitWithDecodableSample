@@ -20,7 +20,7 @@ final class StudyGearAPI {
     }
 
     struct MypageTop: StudyGearRequest {
-        typealias Response = MypageTopResponseEntity
+        typealias Response = MypageTopResponse
 
         let method: HTTPMethod = .get
         let path: String = "/mypage/top/"
