@@ -45,9 +45,14 @@ final class StudyGearAPI {
                     "page": page,
                     "size": size]
         }
-        let sort: String
+        let sort: Sort
         let page: Int
         let size: Int
+
+        enum Sort {
+            case desc
+            case asc
+        }
     }
 
 }

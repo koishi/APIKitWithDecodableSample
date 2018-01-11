@@ -55,7 +55,7 @@ class ViewController: UIViewController {
             }
         }
 
-        Session.send(StudyGearAPI.GetTimeline(sort: "desc", page: 1, size: 30)) { [weak self] result in
+        Session.send(StudyGearAPI.GetTimeline(sort: .desc, page: 1, size: 30)) { [weak self] result in
             switch result {
             case .success(let response):
                 print(response)
