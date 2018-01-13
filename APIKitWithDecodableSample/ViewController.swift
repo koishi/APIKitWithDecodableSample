@@ -46,8 +46,8 @@ class ViewController: UIViewController {
             }
         }
 
-        Session.send(StudyGearAPI.GetStamp()) { [weak self] result in
-            switch result {
+        Session.send(StudyGearAPI.GetStamp()) {
+            switch $0 {
             case .success(let response):
                 print(response)
             case .failure(let error):
@@ -55,14 +55,15 @@ class ViewController: UIViewController {
             }
         }
 
-        Session.send(StudyGearAPI.GetTimeline(sort: .desc, page: 1, size: 30)) { [weak self] result in
-            switch result {
+        Session.send(StudyGearAPI.GetTimeline(sort: nil, page: 1, size: nil)) {
+            switch $0 {
             case .success(let response):
                 print(response)
             case .failure(let error):
                 print(error)
             }
         }
+
     }
 }
 

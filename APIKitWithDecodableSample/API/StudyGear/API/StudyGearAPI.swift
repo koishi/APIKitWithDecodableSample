@@ -21,7 +21,6 @@ final class StudyGearAPI {
 
     struct MypageTop: StudyGearRequest {
         typealias Response = MypageTopResponse
-
         let method: HTTPMethod = .get
         let path: String = "/mypage/top/"
         var parameters: Any? {
@@ -41,13 +40,18 @@ final class StudyGearAPI {
         let method: HTTPMethod = .get
         let path: String = "/timeline/get_message/"
         var parameters: Any? {
-            return ["sort": sort,
-                    "page": page,
-                    "size": size]
+            var parameters: [String : Any] = ["page": page]
+            if let sort = sort {
+                parameters.updateValue(sort, forKey: "sort")
+            }
+            if let size = size {
+                parameters.updateValue(size, forKey: "size")
+            }
+            return  parameters
         }
-        let sort: Sort
+        let sort: Sort?
         let page: Int
-        let size: Int
+        let size: Int?
 
         enum Sort {
             case desc
