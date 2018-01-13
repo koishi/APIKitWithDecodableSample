@@ -109,8 +109,8 @@
 		8206FE632003846D00F85212 /* StudyGear */ = {
 			isa = PBXGroup;
 			children = (
-				8266C45B2007BA6A003906A4 /* Response */,
 				8266C4562004FFCA003906A4 /* API */,
+				8266C45B2007BA6A003906A4 /* Response */,
 			);
 			path = StudyGear;
 			sourceTree = "<group>";
@@ -118,9 +118,9 @@
 		8266C4562004FFCA003906A4 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				8206FE61200383F100F85212 /* StudyGearRequest.swift */,
 				8206FE64200384C900F85212 /* StudyGearAPI.swift */,
 				8266C4542004FEA8003906A4 /* StudyGearAPIResponse.swift */,
+				8206FE61200383F100F85212 /* StudyGearRequest.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -128,21 +128,21 @@
 		8266C457200500FF003906A4 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				8266C45C2007BB2F003906A4 /* TimelineEntity.swift */,
-				8266C45E2007BBE7003906A4 /* SubjectEntity.swift */,
-				8266C4602007BD0D003906A4 /* GradeEntity.swift */,
-				8266C4622007BD7E003906A4 /* ClassFieldEntity.swift */,
-				8266C4642007BE27003906A4 /* QuestionEntity.swift */,
-				8266C4662007BE7A003906A4 /* ChannelEntity.swift */,
-				8266C4682007BEF7003906A4 /* CompanyEntity.swift */,
-				8266C46A2007BF17003906A4 /* AdsenseMovieEntity.swift */,
 				8266C46C2007BF4F003906A4 /* AdsenseImageEntity.swift */,
-				8266C46E2007BFA4003906A4 /* StampEntity.swift */,
-				8266C4702007BFDD003906A4 /* UserEntity.swift */,
-				8266C4722007C01A003906A4 /* SchoolEntity.swift */,
+				8266C46A2007BF17003906A4 /* AdsenseMovieEntity.swift */,
+				8266C4662007BE7A003906A4 /* ChannelEntity.swift */,
 				8266C4742007C03C003906A4 /* CityEntity.swift */,
-				8266C4762007C06D003906A4 /* PrefectureEntity.swift */,
+				8266C4622007BD7E003906A4 /* ClassFieldEntity.swift */,
+				8266C4682007BEF7003906A4 /* CompanyEntity.swift */,
 				8266C4782007C08E003906A4 /* FamilyEntity.swift */,
+				8266C4602007BD0D003906A4 /* GradeEntity.swift */,
+				8266C4762007C06D003906A4 /* PrefectureEntity.swift */,
+				8266C4642007BE27003906A4 /* QuestionEntity.swift */,
+				8266C4722007C01A003906A4 /* SchoolEntity.swift */,
+				8266C46E2007BFA4003906A4 /* StampEntity.swift */,
+				8266C45E2007BBE7003906A4 /* SubjectEntity.swift */,
+				8266C45C2007BB2F003906A4 /* TimelineEntity.swift */,
+				8266C4702007BFDD003906A4 /* UserEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -150,12 +150,12 @@
 		8266C45820050B34003906A4 /* GitHub */ = {
 			isa = PBXGroup;
 			children = (
-				9024C4A61EF76E1B0046AA0A /* GitHubRequest.swift */,
 				9024C4B01EF7962C0046AA0A /* CustomDecodingStrategy.swift */,
 				9024C4A81EF770690046AA0A /* DecodableDataParser.swift */,
-				9024C4AA1EF7753C0046AA0A /* SearchRepositoriesResponse.swift */,
-				9024C4AC1EF7754A0046AA0A /* Repository.swift */,
 				9024C4AE1EF778770046AA0A /* GitHubAPI.swift */,
+				9024C4A61EF76E1B0046AA0A /* GitHubRequest.swift */,
+				9024C4AC1EF7754A0046AA0A /* Repository.swift */,
+				9024C4AA1EF7753C0046AA0A /* SearchRepositoriesResponse.swift */,
 				FAAE64501FFF488E00F468B4 /* User.swift */,
 				FAAE64521FFF51F100F468B4 /* UsersResponse.swift */,
 			);
@@ -166,9 +166,9 @@
 			isa = PBXGroup;
 			children = (
 				8266C457200500FF003906A4 /* Entity */,
-				8206FE66200385F200F85212 /* MypageTopResponse.swift */,
 				8266C45020039F24003906A4 /* GetGradeListResponse.swift */,
 				8266C4522003A24A003906A4 /* GetStampResponse.swift */,
+				8206FE66200385F200F85212 /* MypageTopResponse.swift */,
 				8266C45920050C31003906A4 /* TimeLineResponse.swift */,
 			);
 			path = Response;
@@ -206,9 +206,9 @@
 			isa = PBXGroup;
 			children = (
 				90E8E5721EF76B57005597F8 /* APIKitWithDecodableSample */,
-				90E8E5711EF76B57005597F8 /* Products */,
 				9024C49D1EF76D2C0046AA0A /* Frameworks */,
 				8D7B229AAFF40E7C6D550CBC /* Pods */,
+				90E8E5711EF76B57005597F8 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -225,11 +225,11 @@
 			children = (
 				9024C4A51EF76E0B0046AA0A /* API */,
 				90E8E5731EF76B57005597F8 /* AppDelegate.swift */,
-				90E8E5751EF76B57005597F8 /* ViewController.swift */,
-				90E8E5771EF76B57005597F8 /* Main.storyboard */,
 				90E8E57A1EF76B57005597F8 /* Assets.xcassets */,
-				90E8E57C1EF76B57005597F8 /* LaunchScreen.storyboard */,
 				90E8E57F1EF76B57005597F8 /* Info.plist */,
+				90E8E57C1EF76B57005597F8 /* LaunchScreen.storyboard */,
+				90E8E5771EF76B57005597F8 /* Main.storyboard */,
+				90E8E5751EF76B57005597F8 /* ViewController.swift */,
 			);
 			path = APIKitWithDecodableSample;
 			sourceTree = "<group>";
@@ -408,6 +408,7 @@
 				90E8E5781EF76B57005597F8 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		90E8E57C1EF76B57005597F8 /* LaunchScreen.storyboard */ = {
@@ -416,6 +417,7 @@
 				90E8E57D1EF76B57005597F8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
