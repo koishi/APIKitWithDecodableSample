@@ -16,6 +16,8 @@ struct ApiDryrun {
     let error: String
 }
 
+typealias Api = (name: String, closure: (_ successHandler: @escaping (String) -> Void, _ failureHandler: @escaping (String) -> Void) -> Void)
+
 class ViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView! {
@@ -29,7 +31,6 @@ class ViewController: UIViewController {
     }
 
     private var sendFunctions = [Api]()
-    typealias Api = (name: String, closure: () -> Void)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,13 +44,14 @@ class ViewController: UIViewController {
         let request = StudyGearAPI.MypageTop(userId: "1")
         return (
             request.path,
-            {Session.send(request) {
-                switch $0 {
-                case .success(let response):
-                    print(response)
-                case .failure(let error):
-                    print(error)
-                }
+            {successHandler, failureHandler in
+                Session.send(request) {
+                    switch $0 {
+                    case .success(let response):
+                        successHandler("\(response)")
+                    case .failure(let error):
+                        failureHandler("\(error)")
+                    }
                 }
         })
     }
@@ -58,54 +60,55 @@ class ViewController: UIViewController {
         let request = StudyGearAPI.GetGradeList()
         return (
             request.path,
-            {Session.send(StudyGearAPI.GetGradeList()) {
-            switch $0 {
-            case .success(let response):
-                print(response)
-            case .failure(let error):
-                print(error)
-            }
-            }})
+            {successHandler, failureHandler in
+                Session.send(StudyGearAPI.GetGradeList()) {
+                    switch $0 {
+                    case .success(let response):
+                        successHandler("\(response)")
+                    case .failure(let error):
+                        failureHandler("\(error)")
+                    }
+                }})
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-//        Session.send(StudyGearAPI.MypageTop(userId: "1")) {
-//            switch $0 {
-//            case .success(let response):
-//                print(response)
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
-//
-//        Session.send(StudyGearAPI.GetGradeList()) { [weak self] result in
-//            switch result {
-//            case .success(let response):
-//                print(response)
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
-//
-//        Session.send(StudyGearAPI.GetStamp()) {
-//            switch $0 {
-//            case .success(let response):
-//                print(response)
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
-//
-//        Session.send(StudyGearAPI.GetTimeline(sort: nil, page: 1, size: nil)) {
-//            switch $0 {
-//            case .success(let response):
-//                print(response)
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
+        //        Session.send(StudyGearAPI.MypageTop(userId: "1")) {
+        //            switch $0 {
+        //            case .success(let response):
+        //                print(response)
+        //            case .failure(let error):
+        //                print(error)
+        //            }
+        //        }
+        //
+        //        Session.send(StudyGearAPI.GetGradeList()) { [weak self] result in
+        //            switch result {
+        //            case .success(let response):
+        //                print(response)
+        //            case .failure(let error):
+        //                print(error)
+        //            }
+        //        }
+        //
+        //        Session.send(StudyGearAPI.GetStamp()) {
+        //            switch $0 {
+        //            case .success(let response):
+        //                print(response)
+        //            case .failure(let error):
+        //                print(error)
+        //            }
+        //        }
+        //
+        //        Session.send(StudyGearAPI.GetTimeline(sort: nil, page: 1, size: nil)) {
+        //            switch $0 {
+        //            case .success(let response):
+        //                print(response)
+        //            case .failure(let error):
+        //                print(error)
+        //            }
+        //        }
 
     }
 }
@@ -130,7 +133,12 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let api = sendFunctions[indexPath.row]
-        api.closure()
+        api.closure({print($0)}, {print($0)})
         tableView.deselectRow(at: indexPath, animated: true)
+
+        let sb = UIStoryboard(name: "Main", bundle:nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController else { return }
+        vc.api = api
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

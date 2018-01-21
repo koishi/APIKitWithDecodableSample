@@ -10,6 +10,7 @@
 		8206FE62200383F100F85212 /* StudyGearRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8206FE61200383F100F85212 /* StudyGearRequest.swift */; };
 		8206FE65200384C900F85212 /* StudyGearAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8206FE64200384C900F85212 /* StudyGearAPI.swift */; };
 		8206FE67200385F200F85212 /* MypageTopResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8206FE66200385F200F85212 /* MypageTopResponse.swift */; };
+		820A2AAC20143D1D001216D5 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820A2AAB20143D1D001216D5 /* ResultViewController.swift */; };
 		8266C45120039F24003906A4 /* GetGradeListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C45020039F24003906A4 /* GetGradeListResponse.swift */; };
 		8266C4532003A24A003906A4 /* GetStampResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C4522003A24A003906A4 /* GetStampResponse.swift */; };
 		8266C4552004FEA8003906A4 /* StudyGearAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266C4542004FEA8003906A4 /* StudyGearAPIResponse.swift */; };
@@ -52,6 +53,7 @@
 		8206FE61200383F100F85212 /* StudyGearRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGearRequest.swift; sourceTree = "<group>"; };
 		8206FE64200384C900F85212 /* StudyGearAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGearAPI.swift; sourceTree = "<group>"; };
 		8206FE66200385F200F85212 /* MypageTopResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageTopResponse.swift; sourceTree = "<group>"; };
+		820A2AAB20143D1D001216D5 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		8266C45020039F24003906A4 /* GetGradeListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGradeListResponse.swift; sourceTree = "<group>"; };
 		8266C4522003A24A003906A4 /* GetStampResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStampResponse.swift; sourceTree = "<group>"; };
 		8266C4542004FEA8003906A4 /* StudyGearAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGearAPIResponse.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				90E8E57C1EF76B57005597F8 /* LaunchScreen.storyboard */,
 				90E8E5771EF76B57005597F8 /* Main.storyboard */,
 				90E8E5751EF76B57005597F8 /* ViewController.swift */,
+				820A2AAB20143D1D001216D5 /* ResultViewController.swift */,
 			);
 			path = APIKitWithDecodableSample;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				8206FE65200384C900F85212 /* StudyGearAPI.swift in Sources */,
 				8266C46D2007BF4F003906A4 /* AdsenseImageEntity.swift in Sources */,
 				8266C45D2007BB2F003906A4 /* TimelineEntity.swift in Sources */,
+				820A2AAC20143D1D001216D5 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
